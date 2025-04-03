@@ -3,6 +3,7 @@ __pycache__
 *.egg-info
 build
 dist
+venv
 *.swp
 .mypy_cache
 aw-watcher-window-macos

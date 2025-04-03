@@ -21,6 +21,7 @@ pyobjc-framework-OSAKit = {version = "*", platform="darwin"}
 # see: https://github.com/ActivityWatch/aw-watcher-window/issues/89
 # also locked in aw-watcher-afk
 python-xlib = {version = "0.31", platform = "linux"}
+flask = "<3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

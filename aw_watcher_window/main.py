@@ -1,164 +1,83 @@
-import logging
-import os
-import re
-import signal
-import subprocess
-import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+IST = timezone(timedelta(hours=5, minutes=30)) # Indian Time
+from threading import Thread
 from time import sleep
 
-from aw_client import ActivityWatchClient
-from aw_core.log import setup_logging
-from aw_core.models import Event
-
+from .app_Uage import check_and_update_usage
+from .server import sio, connect_socket, sendData, block_apps
 from .config import parse_args
-from .exceptions import FatalError
+import sys
+import os
 from .lib import get_current_window
-from .macos_permissions import background_ensure_permissions
-
+import logging
 logger = logging.getLogger(__name__)
 
-# run with LOG_LEVEL=DEBUG
-log_level = os.environ.get("LOG_LEVEL")
-if log_level:
-    logger.setLevel(logging.__getattribute__(log_level.upper()))
+# Log File
+LOG_FILE = "window_log.txt"
 
+def heartbeat_loop(poll_time, strategy, exclude_title=False, exclude_titles=[]):
+    """Continuously logs the active window and writes to a file."""
+    while True:
+        current_window = None
+        try:
+            current_window = get_current_window(strategy)
+        except Exception:
+            logger.exception("Error while fetching active window")
+            continue
 
-def kill_process(pid):
-    logger.info("Killing process {}".format(pid))
-    try:
-        os.kill(pid, signal.SIGTERM)
-    except ProcessLookupError:
-        logger.info("Process {} already dead".format(pid))
+        if current_window:
+            try:
+                for pattern in exclude_titles:
+                    if pattern.search(current_window["title"]):
+                        current_window["title"] = "excluded"
 
+                if exclude_title:
+                    current_window["title"] = "excluded"
 
-def try_compile_title_regex(title):
-    try:
-        return re.compile(title, re.IGNORECASE)
-    except re.error:
-        logger.error(f"Invalid regex pattern: {title}")
-        exit(1)
+                now = datetime.now(IST)
+                # log_entry = f"{now}: {current_window}"
+                # log_entry = f"{current_window}"
+                log_entry = f"{now}: [App: {current_window['app']}]"
 
+                # Print to Terminal
+                print(log_entry)
+                sendData(log_entry)
 
+                # Save to File
+                with open(LOG_FILE, "a") as log_file:
+                    log_file.write(log_entry + "\n")
+            except Exception as e:
+                print(f"❌ Error sending log: {e}")
+                connect_socket() # Server.py
+        # sleep(poll_time)
+        sleep(5)
+
+# Main function
 def main():
+    """Main function to start the system."""
+    connect_socket()  # Connect to Socket.IO Server # Server.py
+    
     args = parse_args()
-
+    # Start the background logging thread
+    thread1 = Thread(
+        target=heartbeat_loop,
+        args=(args.poll_time, args.strategy, args.exclude_title, args.exclude_titles),
+        daemon=True,
+    )
+    thread1.start()
+    
+    thread2 = Thread (target= block_apps,daemon=True)
+    thread2.start()
+    
+    thread3 = Thread(target=check_and_update_usage, daemon=True)
+    thread3.start()
+    
     if sys.platform.startswith("linux") and (
         "DISPLAY" not in os.environ or not os.environ["DISPLAY"]
     ):
         raise Exception("DISPLAY environment variable not set")
+    print("Window tracker started. Running background process.")
 
-    setup_logging(
-        name="aw-watcher-window",
-        testing=args.testing,
-        verbose=args.verbose,
-        log_stderr=True,
-        log_file=True,
-    )
-
-    if sys.platform == "darwin":
-        background_ensure_permissions()
-
-    client = ActivityWatchClient(
-        "aw-watcher-window", host=args.host, port=args.port, testing=args.testing
-    )
-
-    bucket_id = f"{client.client_name}_{client.client_hostname}"
-    event_type = "currentwindow"
-
-    client.create_bucket(bucket_id, event_type, queued=True)
-
-    logger.info("aw-watcher-window started")
-    client.wait_for_start()
-
-    with client:
-        if sys.platform == "darwin" and args.strategy == "swift":
-            logger.info("Using swift strategy, calling out to swift binary")
-            binpath = os.path.join(
-                os.path.dirname(os.path.realpath(__file__)), "aw-watcher-window-macos"
-            )
-
-            try:
-                p = subprocess.Popen(
-                    [
-                        binpath,
-                        client.server_address,
-                        bucket_id,
-                        client.client_hostname,
-                        client.client_name,
-                    ]
-                )
-                # terminate swift process when this process dies
-                signal.signal(signal.SIGTERM, lambda *_: kill_process(p.pid))
-                p.wait()
-            except KeyboardInterrupt:
-                print("KeyboardInterrupt")
-                kill_process(p.pid)
-        else:
-            heartbeat_loop(
-                client,
-                bucket_id,
-                poll_time=args.poll_time,
-                strategy=args.strategy,
-                exclude_title=args.exclude_title,
-                exclude_titles=[
-                    try_compile_title_regex(title)
-                    for title in args.exclude_titles
-                    if title is not None
-                ],
-            )
-
-
-def heartbeat_loop(
-    client, bucket_id, poll_time, strategy, exclude_title=False, exclude_titles=[]
-):
+    # Keep the script running
     while True:
-        if os.getppid() == 1:
-            logger.info("window-watcher stopped because parent process died")
-            break
-
-        current_window = None
-        try:
-            current_window = get_current_window(strategy)
-            logger.debug(current_window)
-        except (FatalError, OSError):
-            # Fatal exceptions should quit the program
-            try:
-                logger.exception("Fatal error, stopping")
-            except OSError:
-                pass
-            break
-        except Exception:
-            # Non-fatal exceptions should be logged
-            try:
-                # If stdout has been closed, this exception-print can cause (I think)
-                #   OSError: [Errno 5] Input/output error
-                # See: https://github.com/ActivityWatch/activitywatch/issues/756#issue-1296352264
-                #
-                # However, I'm unable to reproduce the OSError in a test (where I close stdout before logging),
-                # so I'm in uncharted waters here... but this solution should work.
-                logger.exception("Exception thrown while trying to get active window")
-            except OSError:
-                break
-
-        if current_window is None:
-            logger.debug("Unable to fetch window, trying again on next poll")
-        else:
-            for pattern in exclude_titles:
-                if pattern.search(current_window["title"]):
-                    current_window["title"] = "excluded"
-
-            if exclude_title:
-                current_window["title"] = "excluded"
-
-            now = datetime.now(timezone.utc)
-            current_window_event = Event(timestamp=now, data=current_window)
-
-            # Set pulsetime to 1 second more than the poll_time
-            # This since the loop takes more time than poll_time
-            # due to sleep(poll_time).
-            client.heartbeat(
-                bucket_id, current_window_event, pulsetime=poll_time + 1.0, queued=True
-            )
-
-        sleep(poll_time)
+        sleep(1)

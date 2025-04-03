@@ -1,0 +1,632 @@
+{
+    "searchindexer.exe": {
+        "usage_time": 903.8985059261322,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.peek.ui.exe": {
+        "usage_time": 1167.505986213684,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mspcmanager.exe": {
+        "usage_time": 905.9510083198547,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "aggregatorhost.exe": {
+        "usage_time": 1167.5966336727142,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "igfxem.exe": {
+        "usage_time": 906.4187948703766,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.fancyzones.exe": {
+        "usage_time": 905.711154460907,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "ctfmon.exe": {
+        "usage_time": 1170.4489414691925,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "oneapp.igcc.winservice.exe": {
+        "usage_time": 903.2861630916595,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mysqld.exe": {
+        "usage_time": 903.5882322788239,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "escsvc64.exe": {
+        "usage_time": 903.8809993267059,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "csrss.exe": {
+        "usage_time": 903.7206864356995,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.cropandlock.exe": {
+        "usage_time": 903.7350008487701,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "rundll32.exe": {
+        "usage_time": 904.0261895656586,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "hxoutlook.exe": {
+        "usage_time": 904.1865408420563,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "rstmwservice.exe": {
+        "usage_time": 904.2272820472717,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "intelcphdcpsvc.exe": {
+        "usage_time": 904.4228913784027,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.colorpickerui.exe": {
+        "usage_time": 902.0981740951538,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "dllhost.exe": {
+        "usage_time": 901.9001417160034,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mspcmanagerservice.exe": {
+        "usage_time": 901.3095648288727,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "adb.exe": {
+        "usage_time": 901.7900183200836,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "cmd.exe": {
+        "usage_time": 899.3653802871704,
+        "fg_usage_time": 2.33620023727417,
+        "limit": null
+    },
+    "startmenuexperiencehost.exe": {
+        "usage_time": 902.5304012298584,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "conhost.exe": {
+        "usage_time": 901.5828325748444,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "msiexec.exe": {
+        "usage_time": 682.403760433197,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "hpsisvc.exe": {
+        "usage_time": 901.9788453578949,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.exe": {
+        "usage_time": 901.6417241096497,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "openconsole.exe": {
+        "usage_time": 902.0257923603058,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "aesm_service.exe": {
+        "usage_time": 902.5707497596741,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "armsvc.exe": {
+        "usage_time": 902.5189142227173,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "lockapp.exe": {
+        "usage_time": 902.8566617965698,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.alwaysontop.exe": {
+        "usage_time": 902.3055191040039,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "memcompression": {
+        "usage_time": 902.7988851070404,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "googledrivefs.exe": {
+        "usage_time": 897.2046666145325,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "dellffdpwmiservice.exe": {
+        "usage_time": 898.3415179252625,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "intelcphecisvc.exe": {
+        "usage_time": 898.1512622833252,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "securityhealthservice.exe": {
+        "usage_time": 897.2402069568634,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.advancedpaste.exe": {
+        "usage_time": 897.1588265895844,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "rtkauduservice64.exe": {
+        "usage_time": 898.4705367088318,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "node.exe": {
+        "usage_time": 897.3364083766937,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wmiregistrationservice.exe": {
+        "usage_time": 897.3682341575623,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mspcmanagercore.exe": {
+        "usage_time": 897.8340966701508,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "lsass.exe": {
+        "usage_time": 897.7260859012604,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mongod.exe": {
+        "usage_time": 898.2143466472626,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "whatsapp.exe": {
+        "usage_time": 898.4256913661957,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "postman.exe": {
+        "usage_time": 897.7840464115143,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "logonui.exe": {
+        "usage_time": 898.1810302734375,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "searchapp.exe": {
+        "usage_time": 898.3695981502533,
+        "fg_usage_time": 6.702921390533447,
+        "limit": null
+    },
+    "modernflyoutshost.exe": {
+        "usage_time": 898.2151274681091,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.powerlauncher.exe": {
+        "usage_time": 898.3091247081757,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "textinputhost.exe": {
+        "usage_time": 898.6204447746277,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "taskhostw.exe": {
+        "usage_time": 896.1123654842377,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "systemsettingsbroker.exe": {
+        "usage_time": 895.5719497203827,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "lms.exe": {
+        "usage_time": 895.8922343254089,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "securityhealthsystray.exe": {
+        "usage_time": 895.4978828430176,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "igcc.exe": {
+        "usage_time": 896.6902289390564,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "systemsettings.exe": {
+        "usage_time": 896.6023979187012,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "adobecollabsync.exe": {
+        "usage_time": 895.9106712341309,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "nvwmi64.exe": {
+        "usage_time": 895.7335243225098,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "runtimebroker.exe": {
+        "usage_time": 896.6211760044098,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mousocoreworker.exe": {
+        "usage_time": 895.7371046543121,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "windowsterminal.exe": {
+        "usage_time": 896.6481478214264,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "explorer.exe": {
+        "usage_time": 896.652829170227,
+        "fg_usage_time": 58.740885734558105,
+        "limit": null
+    },
+    "nvdisplay.container.exe": {
+        "usage_time": 896.1088757514954,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "code.exe": {
+        "usage_time": 896.7100095748901,
+        "fg_usage_time": 324.3254098892212,
+        "limit": null
+    },
+    "wlanext.exe": {
+        "usage_time": 895.9677224159241,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "spoolsv.exe": {
+        "usage_time": 896.4240458011627,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "video.ui.exe": {
+        "usage_time": 896.3300697803497,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "system": {
+        "usage_time": 897.175867319107,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "igcctray.exe": {
+        "usage_time": 894.2527747154236,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "msmpeng.exe": {
+        "usage_time": 894.9278454780579,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "shellexperiencehost.exe": {
+        "usage_time": 894.1302251815796,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "fontdrvhost.exe": {
+        "usage_time": 894.4054338932037,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powershell.exe": {
+        "usage_time": 894.7338814735413,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "phoneexperiencehost.exe": {
+        "usage_time": 895.3203074932098,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "fsnotifier.exe": {
+        "usage_time": 894.5403800010681,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "jhi_service.exe": {
+        "usage_time": 894.8100833892822,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.awake.exe": {
+        "usage_time": 894.1223275661469,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "intelaudioservice.exe": {
+        "usage_time": 895.1032161712646,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "greenshot.exe": {
+        "usage_time": 894.9518673419952,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "useroobebroker.exe": {
+        "usage_time": 894.2180922031403,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "comppkgsrv.exe": {
+        "usage_time": 894.5460245609283,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "applicationframehost.exe": {
+        "usage_time": 894.790566444397,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "msedgewebview2.exe": {
+        "usage_time": 895.4902667999268,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "chrome.exe": {
+        "usage_time": 894.6440033912659,
+        "fg_usage_time": 458.6444983482361,
+        "limit": null
+    },
+    "mic_mute.exe": {
+        "usage_time": 894.3589012622833,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "hxtsr.exe": {
+        "usage_time": 895.5816648006439,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "dashost.exe": {
+        "usage_time": 894.5954236984253,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wavessvc64.exe": {
+        "usage_time": 892.2673981189728,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "svchost.exe": {
+        "usage_time": 892.7705271244049,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "igfxcuiservice.exe": {
+        "usage_time": 893.0829746723175,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "python.exe": {
+        "usage_time": 892.2929544448853,
+        "fg_usage_time": 18.40771508216858,
+        "limit": null
+    },
+    "nissrv.exe": {
+        "usage_time": 892.2895066738129,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "esif_uf.exe": {
+        "usage_time": 892.506753206253,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "officeclicktorun.exe": {
+        "usage_time": 893.568656206131,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "dwm.exe": {
+        "usage_time": 892.6462860107422,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "mpdefendercoreservice.exe": {
+        "usage_time": 892.6773014068604,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "system idle process": {
+        "usage_time": 893.1561284065247,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "winlogon.exe": {
+        "usage_time": 893.5624086856842,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "smss.exe": {
+        "usage_time": 888.2479908466339,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "sihost.exe": {
+        "usage_time": 887.7571437358856,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wmiprvse.exe": {
+        "usage_time": 893.490392446518,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.keyboardmanagerengine.exe": {
+        "usage_time": 893.6444029808044,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "registry": {
+        "usage_time": 890.8084363937378,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "services.exe": {
+        "usage_time": 888.7778429985046,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wudfhost.exe": {
+        "usage_time": 888.8889632225037,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wavessyssvc64.exe": {
+        "usage_time": 891.5124912261963,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "crashpad_handler.exe": {
+        "usage_time": 890.461056470871,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wininit.exe": {
+        "usage_time": 888.0137541294098,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "studio64.exe": {
+        "usage_time": 891.3695142269135,
+        "fg_usage_time": 2.3864147663116455,
+        "limit": null
+    },
+    "chatgpt.exe": {
+        "usage_time": 891.4644510746002,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "cortana.exe": {
+        "usage_time": 890.9509155750275,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "powertoys.powerocr.exe": {
+        "usage_time": 891.5217201709747,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "notepad.exe": {
+        "usage_time": 0.0,
+        "fg_usage_time": 0.0,
+        "limit": 10
+    },
+    "consent.exe": {
+        "usage_time": 9.148465156555176,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "audiodg.exe": {
+        "usage_time": 656.9144215583801,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "wmic.exe": {
+        "usage_time": 14.005072593688965,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "git.exe": {
+        "usage_time": 0,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "smartscreen.exe": {
+        "usage_time": 232.7399492263794,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "backgroundtaskhost.exe": {
+        "usage_time": 26.927117824554443,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "un_a.exe": {
+        "usage_time": 0.0,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "npp.8.4.1.installer.x64.exe": {
+        "usage_time": 4.506870746612549,
+        "fg_usage_time": 4.506870746612549,
+        "limit": null
+    },
+    "gup.exe": {
+        "usage_time": 0,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "compattelrunner.exe": {
+        "usage_time": 51.28891658782959,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "searchfilterhost.exe": {
+        "usage_time": 46.38424038887024,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "searchprotocolhost.exe": {
+        "usage_time": 46.3852744102478,
+        "fg_usage_time": 0,
+        "limit": null
+    },
+    "bdeuisrv.exe": {
+        "usage_time": 0,
+        "fg_usage_time": 0,
+        "limit": null
+    }
+}
